@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷 - 亞洲大學學生</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+    transition:0.3s;
+}
+
+header{
+    background:#4a6fa5;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+nav{
+    background:#333;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffd166;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.section{
+    margin-bottom:40px;
+}
+
+.section h2{
+    border-left:6px solid #4a6fa5;
+    padding-left:10px;
+    margin-bottom:15px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skills span{
+    display:inline-block;
+    background:#4a6fa5;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
+}
+
+.project{
+    margin-bottom:15px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#333;
+    color:white;
+}
+
+button{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    background:#ffd166;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.dark{
+    background:#1e1e1e;
+    color:#eee;
+}
+
+.dark .card{
+    background:#2c2c2c;
+}
+
+.dark nav{
+    background:#111;
+}
+
+.dark footer{
+    background:#111;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>個人履歷</h1>
+<p>亞洲大學學生 | 學號：114024081</p>
+<button onclick="toggleDark()">切換深色模式</button>
+</header>
+
+<nav>
+<a href="#about">關於我</a>
+<a href="#education">學歷</a>
+<a href="#skills">技能</a>
+<a href="#projects">專案</a>
+<a href="#contact">聯絡方式</a>
+</nav>
+
+<div class="container">
+
+<section id="about" class="section">
+<h2>關於我</h2>
+<div class="card">
+<p>
+你好，我是亞洲大學的學生，目前就讀於大學部。
+對於科技、程式設計與資訊技術充滿興趣，
+希望未來能在軟體開發或資訊相關領域發展。
+</p>
+</div>
+</section>
+
+<section id="education" class="section">
+<h2>學歷</h2>
+<div class="card">
+<p><strong>亞洲大學</strong></p>
+<p>學士學位（在學中）</p>
+<p>學號：114024081</p>
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2>技能</h2>
+<div class="card skills">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Python</span>
+<span>C++</span>
+<span>資料結構</span>
+</div>
+</section>
+
+<section id="projects" class="section">
+<h2>專案經驗</h2>
+<div class="card">
+
+<div class="project">
+<h3>個人網站</h3>
+<p>使用 HTML、CSS、JavaScript 製作個人網站展示作品。</p>
+</div>
+
+<div class="project">
+<h3>課程專案</h3>
+<p>完成多個課程程式設計作業與小型系統開發。</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>聯絡方式</h2>
+<div class="card">
+<p>Email：your_email@example.com</p>
+<p>GitHub：github.com/yourname</p>
+<p>電話：0912-345-678</p>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 亞洲大學學生履歷</p>
+</footer>
+
+<script>
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+document.querySelectorAll("nav a").forEach(anchor=>{
+    anchor.addEventListener("click",function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior:"smooth"
+        });
+    });
+});
+
+</script>
+
+</body>
+</html>
