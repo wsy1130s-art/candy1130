@@ -27,6 +27,16 @@ header{
     text-align:center;
 }
 
+/* 新增照片樣式 */
+.profile-photo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-top:15px;
+    border:4px solid white;
+}
+
 nav{
     background:#333;
     padding:10px;
@@ -113,7 +123,6 @@ button{
 .dark footer{
     background:#111;
 }
-
 </style>
 </head>
 
@@ -122,6 +131,11 @@ button{
 <header>
 <h1>個人履歷</h1>
 <p>亞洲大學學生 | 學號：114024081</p>
+
+<!-- 加入照片 -->
+<img src="images/photo.jpg" class="profile-photo" alt="個人照片">
+
+<br>
 <button onclick="toggleDark()">切換深色模式</button>
 </header>
 
