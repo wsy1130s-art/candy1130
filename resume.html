@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>個人履歷 - 亞洲大學學生</title>
+<title>履歷表</title>
 
 <style>
 *{
@@ -14,221 +14,159 @@
 }
 
 body{
-    background:#f4f4f4;
-    color:#333;
-    line-height:1.6;
-    transition:0.3s;
-}
-
-header{
-    background:#4a6fa5;
-    color:white;
-    padding:30px 20px;
-    text-align:center;
-}
-
-/* 新增照片樣式 */
-.profile-photo{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-top:15px;
-    border:4px solid white;
-}
-
-nav{
-    background:#333;
-    padding:10px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#ffd166;
+    background:#e9eef2;
 }
 
 .container{
-    max-width:900px;
-    margin:auto;
-    padding:20px;
+    max-width:1000px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 左側 */
+.left{
+    background:#eef2f5;
+    padding:30px;
+}
+
+.profile-img{
+    width:100%;
+    border-radius:10px;
 }
 
 .section{
-    margin-bottom:40px;
+    margin-top:30px;
 }
 
 .section h2{
-    border-left:6px solid #4a6fa5;
-    padding-left:10px;
+    color:#7aa6b1;
+    margin-bottom:10px;
+}
+
+.section p{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.skills li{
+    margin-bottom:6px;
+}
+
+/* 右側 */
+.right{
+    padding:40px;
+}
+
+.name{
+    font-size:40px;
+    color:#7aa6b1;
+    font-weight:bold;
+}
+
+.title{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.work{
+    margin-top:30px;
+}
+
+.work h2{
+    color:#7aa6b1;
     margin-bottom:15px;
 }
 
-.card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+.job{
+    margin-bottom:20px;
 }
 
-.skills span{
-    display:inline-block;
-    background:#4a6fa5;
-    color:white;
-    padding:6px 12px;
-    border-radius:20px;
-    margin:5px;
+.job h3{
+    font-size:16px;
+}
+
+.job p{
     font-size:14px;
 }
 
-.project{
-    margin-bottom:15px;
+.job ul{
+    margin-left:20px;
+    font-size:14px;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#333;
-    color:white;
-}
-
-button{
-    margin-top:10px;
-    padding:8px 15px;
-    border:none;
-    background:#ffd166;
-    cursor:pointer;
-    border-radius:5px;
-}
-
-.dark{
-    background:#1e1e1e;
-    color:#eee;
-}
-
-.dark .card{
-    background:#2c2c2c;
-}
-
-.dark nav{
-    background:#111;
-}
-
-.dark footer{
-    background:#111;
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>個人履歷</h1>
-<p>亞洲大學學生 | 學號：114024081</p>
-
-<!-- 加入照片 -->
-<img src="images/photo.jpg" class="profile-photo" alt="個人照片">
-
-<br>
-<button onclick="toggleDark()">切換深色模式</button>
-</header>
-
-<nav>
-<a href="#about">關於我</a>
-<a href="#education">學歷</a>
-<a href="#skills">技能</a>
-<a href="#projects">專案</a>
-<a href="#contact">聯絡方式</a>
-</nav>
-
 <div class="container">
 
-<section id="about" class="section">
-<h2>關於我</h2>
-<div class="card">
-<p>
-你好，我是亞洲大學的學生，目前就讀於大學部。
-對於科技、程式設計與資訊技術充滿興趣，
-希望未來能在軟體開發或資訊相關領域發展。
-</p>
+    <!-- 左側 -->
+    <div class="left">
+        <img src="images/photo.jpg" class="profile-img">
+
+        <div class="section">
+            <h2>學歷</h2>
+            <p><strong>亞洲大學</strong></p>
+            <p>學士（在學中）</p>
+        </div>
+
+        <div class="section">
+            <h2>技能</h2>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>C++</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 右側 -->
+    <div class="right">
+        <div class="name">你的名字</div>
+        <div class="title">學生 / 開發者</div>
+
+        <div class="contact">
+            <p>📞 0912-345-678</p>
+            <p>📧 your_email@example.com</p>
+            <p>🌐 github.com/yourname</p>
+        </div>
+
+        <div class="work">
+            <h2>專案經驗</h2>
+
+            <div class="job">
+                <h3>個人網站</h3>
+                <p>使用 HTML / CSS / JS 製作</p>
+                <ul>
+                    <li>設計前端版面</li>
+                    <li>實作互動效果</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>課程專案</h3>
+                <p>完成多個系統開發</p>
+                <ul>
+                    <li>資料結構應用</li>
+                    <li>演算法實作</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
 </div>
-</section>
-
-<section id="education" class="section">
-<h2>學歷</h2>
-<div class="card">
-<p><strong>亞洲大學</strong></p>
-<p>學士學位（在學中）</p>
-<p>學號：114024081</p>
-</div>
-</section>
-
-<section id="skills" class="section">
-<h2>技能</h2>
-<div class="card skills">
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>Python</span>
-<span>C++</span>
-<span>資料結構</span>
-</div>
-</section>
-
-<section id="projects" class="section">
-<h2>專案經驗</h2>
-<div class="card">
-
-<div class="project">
-<h3>個人網站</h3>
-<p>使用 HTML、CSS、JavaScript 製作個人網站展示作品。</p>
-</div>
-
-<div class="project">
-<h3>課程專案</h3>
-<p>完成多個課程程式設計作業與小型系統開發。</p>
-</div>
-
-</div>
-</section>
-
-<section id="contact" class="section">
-<h2>聯絡方式</h2>
-<div class="card">
-<p>Email：your_email@example.com</p>
-<p>GitHub：github.com/yourname</p>
-<p>電話：0912-345-678</p>
-</div>
-</section>
-
-</div>
-
-<footer>
-<p>© 2026 亞洲大學學生履歷</p>
-</footer>
-
-<script>
-
-function toggleDark(){
-    document.body.classList.toggle("dark");
-}
-
-document.querySelectorAll("nav a").forEach(anchor=>{
-    anchor.addEventListener("click",function(e){
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior:"smooth"
-        });
-    });
-});
-
-</script>
 
 </body>
 </html>
