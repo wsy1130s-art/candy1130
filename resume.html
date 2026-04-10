@@ -3,60 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-<title>Tsay</title>
-=======
 <title>履歷表</title>
->>>>>>> 1840dfef0f0c727ca02a8289c9ebde3fe1a75a97
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
 
 body{
-    background:#e9eef2;
+    background:linear-gradient(135deg,#eef2f7,#dfe9f3);
 }
 
 .container{
     max-width:1000px;
     margin:40px auto;
     display:grid;
-    grid-template-columns: 1fr 2fr;
-    background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    grid-template-columns:300px 1fr;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* 左側 */
 .left{
-    background:#eef2f5;
+    background:#1e2a38;
+    color:#fff;
     padding:30px;
+    text-align:center;
 }
 
 .profile-img{
-    width:100%;
-    border-radius:10px;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #fff;
+    margin-bottom:20px;
 }
 
-.section{
-    margin-top:30px;
+.left h2{
+    margin-top:25px;
+    font-size:18px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    padding-bottom:5px;
 }
 
-.section h2{
-    color:#7aa6b1;
-    margin-bottom:10px;
-}
-
-.section p{
+.left p, .left li{
     font-size:14px;
-    margin-bottom:5px;
+    margin:8px 0;
 }
 
 .skills li{
-    margin-bottom:6px;
+    list-style:none;
+    background:#2f3e4f;
+    margin:6px 0;
+    padding:6px;
+    border-radius:8px;
 }
 
 /* 右側 */
@@ -65,28 +71,34 @@ body{
 }
 
 .name{
-    font-size:40px;
-    color:#7aa6b1;
+    font-size:36px;
     font-weight:bold;
+    color:#1e2a38;
 }
 
 .title{
-    font-size:20px;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.contact{
     margin-bottom:20px;
 }
 
 .contact p{
     font-size:14px;
-    margin-bottom:5px;
+    margin:5px 0;
 }
 
-.work{
+.section{
     margin-top:30px;
 }
 
-.work h2{
-    color:#7aa6b1;
-    margin-bottom:15px;
+.section h2{
+    color:#1e2a38;
+    margin-bottom:10px;
+    border-left:5px solid #7aa6b1;
+    padding-left:10px;
 }
 
 .job{
@@ -95,10 +107,12 @@ body{
 
 .job h3{
     font-size:16px;
+    color:#333;
 }
 
 .job p{
     font-size:14px;
+    color:#666;
 }
 
 .job ul{
@@ -117,22 +131,18 @@ body{
     <div class="left">
         <img src="images/photo.jpg" class="profile-img">
 
-        <div class="section">
-            <h2>學歷</h2>
-            <p><strong>亞洲大學</strong></p>
-            <p>學士（在學中）</p>
-        </div>
+        <h2>學歷</h2>
+        <p>亞洲大學</p>
+        <p>學士（在學中）</p>
 
-        <div class="section">
-            <h2>技能</h2>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>C++</li>
-            </ul>
-        </div>
+        <h2>技能</h2>
+        <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C++</li>
+        </ul>
     </div>
 
     <!-- 右側 -->
@@ -146,7 +156,7 @@ body{
             <p>🌐 github.com/yourname</p>
         </div>
 
-        <div class="work">
+        <div class="section">
             <h2>專案經驗</h2>
 
             <div class="job">
